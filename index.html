@@ -9,6 +9,10 @@
         var canvas = document.getElementById("helloCanvas");
         var ctx = canvas.getContext("2d");
         ctx.fillRect(0, 0, 600, 400);
+
+        var rabbit = new Image();
+        rabbit.src = "images/rabbit.png";
+        ctx.drawImage(rabbit, 300, 200);
       }
     </script>
 
