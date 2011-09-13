@@ -5,6 +5,8 @@
     <title>Hello Canvas</title>
 
     <script type="text/javascript">
+      var time = 0;
+
       window.onload = function(){
         setInterval('draw()', 100);
       }
@@ -17,7 +19,13 @@
         var rabbit = new Image();
         rabbit.src = "images/rabbit.png";
         ctx.drawImage(rabbit, 50, 150);
-        ctx.translate(10,0);
+        if(time < 15){
+          ctx.translate(10,0);
+          time++;
+        } else {
+          ctx.translate(-150,0);
+          time = 0;
+        }
       }
     </script>
 
